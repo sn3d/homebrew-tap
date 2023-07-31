@@ -5,20 +5,20 @@
 class Kconf < Formula
   desc "Kconf helps you with kubeconfig manipulation"
   homepage "https://github.com/sn3d/"
-  version "0.4.4"
+  version "0.4.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sn3d/kconf/releases/download/v0.4.4/kconf_macOS_arm64.tar.gz"
-      sha256 "b115f1e2610d5f5a5ae92e083a2b1702c9a79d6132d9318480724a3a744c3d0d"
+    if Hardware::CPU.intel?
+      url "https://github.com/sn3d/kconf/releases/download/v0.4.5/kconf_macOS_amd64.tar.gz"
+      sha256 "fff42f73187f5ad9ef2f04a39a449b64b9c84eb168978491ab38d7407e2cb660"
 
       def install
         bin.install "kconf"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sn3d/kconf/releases/download/v0.4.4/kconf_macOS_amd64.tar.gz"
-      sha256 "b8e2845c272be69921f9b100c89282501df1dc7ee966a5bba85d128ad8433f31"
+    if Hardware::CPU.arm?
+      url "https://github.com/sn3d/kconf/releases/download/v0.4.5/kconf_macOS_arm64.tar.gz"
+      sha256 "3fed673f2b10a434c2e7ac6e704f55f082af028c75576a1de7f5efe71ce92aff"
 
       def install
         bin.install "kconf"
@@ -28,24 +28,24 @@ class Kconf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sn3d/kconf/releases/download/v0.4.4/kconf_linux_arm.tar.gz"
-      sha256 "22f92277bef8a743c6383b445a4aa3a1511fe0964c390d83f2e23a6b6c35f7a1"
+      url "https://github.com/sn3d/kconf/releases/download/v0.4.5/kconf_linux_arm.tar.gz"
+      sha256 "43e5b606db3ddbd978ff71c2c2bee7559ebee706e9bde701b804fbdc730b892a"
 
       def install
         bin.install "kconf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sn3d/kconf/releases/download/v0.4.4/kconf_linux_amd64.tar.gz"
-      sha256 "a80a0362b302c32782a2db3d829fe05a36a324d65afbda8f376dd8bf5606a334"
+      url "https://github.com/sn3d/kconf/releases/download/v0.4.5/kconf_linux_amd64.tar.gz"
+      sha256 "ab1c0592c3c906d37296b06731eaea724588dbee3acc890fb3aa10ebc18524b8"
 
       def install
         bin.install "kconf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sn3d/kconf/releases/download/v0.4.4/kconf_linux_arm64.tar.gz"
-      sha256 "fbf8219f7d2126f4f6f23582b6a2b18b00d8a8b509df89e8cb7209f386da4d4d"
+      url "https://github.com/sn3d/kconf/releases/download/v0.4.5/kconf_linux_arm64.tar.gz"
+      sha256 "4abdfe1fca1d9f513056873f28796cb5ed4cfdfc0611d200ba00dcee1392e0fd"
 
       def install
         bin.install "kconf"
