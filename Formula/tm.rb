@@ -5,20 +5,20 @@
 class Tm < Formula
   desc "Local task manager for agents"
   homepage "https://github.com/sn3d/tm"
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sn3d/tm/releases/download/v0.2.1/tm_macOS_amd64.tar.gz"
-      sha256 "433d871f23e5ed03cfac82b2fd0ba656a768588a0e4e986002424da533765eea"
+      url "https://github.com/sn3d/tm/releases/download/v0.3.0/tm_macOS_amd64.tar.gz"
+      sha256 "4ceabd91a3537ad1fdc3226f43c3e50945a4ed80edd2d6d2db6c73efc002ac24"
 
       define_method(:install) do
         bin.install "tm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sn3d/tm/releases/download/v0.2.1/tm_macOS_arm64.tar.gz"
-      sha256 "5c319c7915940d908b96c24e5f125a082541d2dcd15155c66e5dc49387d94670"
+      url "https://github.com/sn3d/tm/releases/download/v0.3.0/tm_macOS_arm64.tar.gz"
+      sha256 "79678d85f3d1cb311c648d51903606c633b12330fe8a03ce5edc9621d4371945"
 
       define_method(:install) do
         bin.install "tm"
@@ -28,15 +28,15 @@ class Tm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sn3d/tm/releases/download/v0.2.1/tm_linux_amd64.tar.gz"
-      sha256 "1f9df9e893e5ae8801c7921e9b19753b5f6532b43d8271e0681aa3370dcb86de"
+      url "https://github.com/sn3d/tm/releases/download/v0.3.0/tm_linux_amd64.tar.gz"
+      sha256 "10f11c4d9ecb1f54610c125edacb53d8c88dde20313aee7ded3da14323ede445"
       define_method(:install) do
         bin.install "tm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sn3d/tm/releases/download/v0.2.1/tm_linux_arm64.tar.gz"
-      sha256 "aa6660a00386d5c37bb02398e9935944e6a8266463f8383c32b044c0d52ab56b"
+      url "https://github.com/sn3d/tm/releases/download/v0.3.0/tm_linux_arm64.tar.gz"
+      sha256 "19a1748af6bd09a80f5d61add9973fbc9b03c3962f8c5c2ff7316c8e3aa79f32"
       define_method(:install) do
         bin.install "tm"
       end
